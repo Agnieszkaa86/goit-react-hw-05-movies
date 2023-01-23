@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from 'react';
-import { useLocation,useNavigate, useParams } from 'react-router-dom';
-import api from "../services/movieApi";
+import React, { useEffect, useState } from 'react';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import api from '../services/movieApi';
 import MovieDetails from '../components/MovieDetails';
-import { IoIosArrowRoundBack } from "react-icons/io";
-import { Button } from "./MovieDetailsPage.styled";
+import { IoIosArrowRoundBack } from 'react-icons/io';
+import { Button } from './MovieDetailsPage.styled';
 
 const MoviesDetailsPage = () => {
   const navigate = useNavigate();
