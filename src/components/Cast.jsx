@@ -1,9 +1,8 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import api from "../services/movieApi";
-import { nanoid } from "nanoid";
-import { StyledList, StyledItem, Img } from "./Cast.styled";
-
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import api from '../services/movieApi';
+import { nanoid } from 'nanoid';
+import { StyledList, StyledItem, Img } from './Cast.styled';
 
 const Cast = () => {
   const [cast, setCast] = useState([]);
