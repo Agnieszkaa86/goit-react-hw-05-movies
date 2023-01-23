@@ -1,11 +1,8 @@
-
-import MoviesList from "../components/MoviesList";
-import React, { useEffect, useState } from "react";
-import { Outlet, useParams, useSearchParams} from 'react-router-dom';
+import MoviesList from '../components/MoviesList';
+import React, { useEffect, useState } from 'react';
+import { Outlet, useParams, useSearchParams } from 'react-router-dom';
 import api from '../services/movieApi';
-import { Button, Input } from "./Movies.styled";
-
-
+import { Button, Input } from './Movies.styled';
 
 const Movies = () => {
   const [searchedMovie, setSearchedMovie] = useState([]);
@@ -37,7 +34,7 @@ const Movies = () => {
       {!params.movieId && (
         <>
           <form onSubmit={searchMovie}>
-            <Input type="text" name="query"/>
+            <Input type="text" name="query" />
             <Button type="submit">Search Movies</Button>
           </form>
           <MoviesList movies={searchedMovie} />
