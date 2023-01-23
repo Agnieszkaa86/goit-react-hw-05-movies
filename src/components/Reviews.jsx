@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import api from '../services/movieApi';
-import { StyledList, StyledItem } from "./Reviews.styled";
+import { StyledList, StyledItem } from './Reviews.styled';
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
