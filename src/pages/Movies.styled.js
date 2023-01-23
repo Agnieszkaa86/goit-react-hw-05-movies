@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const Button = styled.button`
   margin-left: 5px;
   align-items: center;
-  background-color: #fff;
-  border-radius: 2px;
+  background-color: #e9e9e9;
+  border-radius: 3px;
   box-shadow: transparent 0 0 0 3px, rgba(18, 18, 18, 0.1) 0 6px 20px;
   box-sizing: border-box;
   color: #121212;
@@ -24,7 +24,7 @@ export const Button = styled.button`
   text-decoration: none;
   transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
   white-space: nowrap;
-  border: 0;
+  border: 0.2;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
