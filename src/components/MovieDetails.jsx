@@ -4,12 +4,10 @@ import PropTypes from 'prop-types';
 import { Wrapper, InfoWrapper } from './MovieDetails.styled';
 import Loader from './Loader';
 
-
-
 const MovieDetails = ({ movie }) => {
-    const location = useLocation();
+  const location = useLocation();
 
-  const {title, overview, vote_average, genres, poster_path } = movie;
+  const { title, overview, vote_average, genres, poster_path } = movie;
   return (
     <>
       <Wrapper>
