@@ -7,13 +7,15 @@ export const StyledLink = styled(NavLink)`
   color: black;
   margin-left: 25px;
   margin-top: 15px;
+   text-decoration: none;
   &.active {
     color: red;
+    text-decoration:underline;
   }
 `;
 
 export const Nav = styled.div`
-box-shadow: 0 4px 2px -2px gray;
+box-shadow: 0 4px 2px -2px black;
   padding-bottom: 15px;
   margin-bottom: 25px;
 `;
