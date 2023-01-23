@@ -1,18 +1,19 @@
-import { Circles } from 'react-loader-spinner';
+import { TailSpin } from 'react-loader-spinner';
 import { SpinnerWrapper } from './Loader.styled';
 
 const Loader = () => {
   return (
     <SpinnerWrapper>
-      <Circles
-        height="100"
-        width="100"
-        color="#3f51b5"
-        ariaLabel="circles-loading"
-        wrapperStyle={{}}
-        wrapperClass=""
-        visible={true}
-      />
+      <TailSpin
+  height="80"
+  width="80"
+  color="#4fa94d"
+  ariaLabel="tail-spin-loading"
+  radius="1"
+  wrapperStyle={{}}
+  wrapperClass=""
+  visible={true}
+/>
     </SpinnerWrapper>
   );
 };
