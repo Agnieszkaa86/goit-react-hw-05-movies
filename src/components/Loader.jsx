@@ -1,5 +1,5 @@
-import { Circles } from "react-loader-spinner";
-import { SpinnerWrapper } from "./Loader.styled";
+import { Circles } from 'react-loader-spinner';
+import { SpinnerWrapper } from './Loader.styled';
 
 const Loader = () => {
   return (
