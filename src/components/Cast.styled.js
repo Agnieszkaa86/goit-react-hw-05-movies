@@ -12,7 +12,7 @@ export const StyledItem = styled.li`
   border: 1px solid black;
   border-radius: 12px;
   text-align: center;
-  background-color: #878f99;
+  background-color: #fff;
   overflow: hidden;
 `;
 
