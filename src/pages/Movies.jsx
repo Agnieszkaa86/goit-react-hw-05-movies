@@ -8,6 +8,7 @@ const Movies = () => {
   const [searchedMovie, setSearchedMovie] = useState([]);
   const [searchQuery, setSearchQuery] = useSearchParams();
   const query = searchQuery.get('query');
+
   const searchMovie = e => {
     e.preventDefault();
     const form = e.currentTarget;
@@ -20,7 +21,7 @@ const Movies = () => {
   };
 
   useEffect(() => {
-    if (query === null) {
+    if (query === !query) {
       setSearchedMovie([]);
       return;
     }
@@ -40,11 +41,7 @@ const Movies = () => {
           <MoviesList movies={searchedMovie} />
         </>
       )}
-      {params.movieId && (
-        <>
-          <Outlet />
-        </>
-      )}
+      {params.movieId && <Outlet />}
     </>
   );
 };
