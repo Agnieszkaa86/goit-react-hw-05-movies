@@ -1,4 +1,4 @@
-import { Routes, Route} from "react-router-dom";
+import { Routes, Route, Navigate} from "react-router-dom";
 import React from 'react';
 import Home from "./components/Home";
 
@@ -7,7 +7,7 @@ const Movies = React.lazy(() => import("./pages/Movies"));
 const MovieDetailsPage = React.lazy(() => import("./pages/MovieDetailsPage"));
 const Cast= React.lazy(() => import("./components/Cast"));
 const Reviews = React.lazy(() => import("./components/Reviews"));
-const NotFound = React.lazy(() => import("./pages/NotFound"));
+
 
 const  App = ()=> {
   return (
@@ -22,7 +22,7 @@ const  App = ()=> {
             </Route>
           </Route>
         </Route>
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<Navigate to ="/"/>} />
       </Routes>
     </>
   );
