@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import api from '../services/movieApi';
 import { nanoid } from 'nanoid';
+import PropTypes from "prop-types";
 import { StyledList, StyledItem, Img } from './Cast.styled';
 
 const Cast = () => {
@@ -43,3 +44,13 @@ const Cast = () => {
 };
 
 export default Cast;
+
+Cast.propTypes = {
+  cast: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      character: PropTypes.string.isRequired,
+      profile_path: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};
