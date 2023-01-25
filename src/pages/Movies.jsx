@@ -13,7 +13,7 @@ const Movies = () => {
     e.preventDefault();
     const form = e.currentTarget;
     const formQuery = form.elements.query.value;
-    if (formQuery === '') {
+    if (!formQuery) {
       return;
     }
     setSearchQuery({ query: formQuery });
@@ -21,7 +21,7 @@ const Movies = () => {
   };
 
   useEffect(() => {
-    if (query === !query) {
+    if (!query) {
       setSearchedMovie([]);
       return;
     }
