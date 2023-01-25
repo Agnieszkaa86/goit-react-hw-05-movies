@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
-import { Link, Outlet, useLocation } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { Wrapper, InfoWrapper } from './MovieDetails.styled';
+import { Wrapper, InfoWrapper, StyledLink, Undertitle} from './MovieDetails.styled';
 import Loader from './Loader';
 
 const MovieDetails = ({ movie }) => {
@@ -35,17 +35,17 @@ const MovieDetails = ({ movie }) => {
         </InfoWrapper>
       </Wrapper>
       <div>
-        <h3>Additional information</h3>
+        <Undertitle>Additional information</Undertitle>
         <ul>
           <li>
-            <Link to={`cast`} state={location.state}>
+            <StyledLink to={`cast`} state={location.state}>
               Cast
-            </Link>
+            </StyledLink>
           </li>
           <li>
-            <Link to={`reviews`} state={location.state}>
+            <StyledLink to={`reviews`} state={location.state}>
               Reviews
-            </Link>
+            </StyledLink>
           </li>
         </ul>
         <Suspense fallback={<Loader />}>
@@ -57,7 +57,15 @@ const MovieDetails = ({ movie }) => {
 };
 
 MovieDetails.propTypes = {
-  movie: PropTypes.object,
+  movie: PropTypes.arrayOf(
+    PropTypes.shape({
+      vote_average: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      overview: PropTypes.string.isRequired,
+      genres: PropTypes.string.isRequired,
+      poster_path: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 };
 
 export default MovieDetails;
